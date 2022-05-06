@@ -1,6 +1,6 @@
-import { Skills } from "./interfaces"
+import { Skill } from "./interfaces"
 
-export const SKILLS : Skills[] = [
+export const SKILLS : Skill[] = [
     {id: 1,
      name: 'HTML5',
      porc: 55,
@@ -13,5 +13,10 @@ export const SKILLS : Skills[] = [
         id: 3,
         name: 'JavaScript',
         porc: 55,
+    },
+    {
+        id: 4,
+        name: 'Bootstrap',
+        porc: 25,
     }
 ]

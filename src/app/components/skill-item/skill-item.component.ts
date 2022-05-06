@@ -1,5 +1,5 @@
 import { Component, OnInit, Input} from '@angular/core';
-import { Skills} from 'src/app/interfaces';
+import { Skill} from 'src/app/interfaces';
 import { SKILLS } from 'src/app/data';
 
 @Component({
@@ -8,7 +8,7 @@ import { SKILLS } from 'src/app/data';
   styleUrls: ['./skill-item.component.css']
 })
 export class SkillItemComponent implements OnInit {
-  @Input() skill : Skills = SKILLS[0];
+  @Input() skill : Skill = SKILLS[0];
   @Input() width : string = ""
   constructor() { }
 

@@ -1,15 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Skills } from '../interfaces';
+import { Skill } from '../interfaces';
 import { SKILLS } from '../data';
+
 @Injectable({
   providedIn: 'root'
 })
 export class SkillService {
 
   constructor() { }
-  getSkill(): Skills[] {
+  getSkill(): Skill[] {
     return SKILLS;
+  };
+  decirHola(){
+    console.log('este servicio dice hola')
   }
-
   
 }

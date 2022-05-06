@@ -1,4 +1,4 @@
-export interface Skills{
+export interface Skill{
     id? : number;
     name : string;
     porc: number;
