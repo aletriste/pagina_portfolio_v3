@@ -1,0 +1,10 @@
+<section id="portfolio">
+    <div class="container mt-3">
+        
+            <div class="row">
+                <div class="col-xl-11"><h1>Portfolio Component</h1></div>
+                <div class="col-xl-1"><i class="fa-solid fa-square-plus btn btn-success"></i></div>
+            </div> 
+        <app-portfolio-item *ngFor ="let portfolio of porfolio" [portfolio]="portfolio"></app-portfolio-item>
+    </div>
+  </section>

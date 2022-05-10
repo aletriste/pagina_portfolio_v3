@@ -1,7 +1,23 @@
 export interface Skill{
-    id? : number;
-    name : string;
-    porc: number;
+    id? : Number;
+    name : String;
+    porc: Number;
 };
 
-export interface education{}
+export interface Portfolio{
+    id? : Number;
+    titulo: string;
+    subtitulo: string;
+    text: string;
+    imageUrl: string;
+    linkUrl:string;
+};
+
+export interface Educacion{
+    id?: Number;
+    centro: String;
+    titulo: String;
+    descipcion: String;
+    imagenUrl: String;
+    linkUrl: String;
+}

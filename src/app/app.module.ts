@@ -9,6 +9,11 @@ import { AboutComponent } from './components/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { SkillItemComponent } from './components/skill-item/skill-item.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { PortfolioItemComponent } from './components/portfolio-item/portfolio-item.component';
+import { LoginModalComponent } from './components/login-modal/login-modal.component';
+import { EducacionComponent } from './components/educacion/educacion.component';
+import { EducacionItemComponent } from './components/educacion-item/educacion-item.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +23,12 @@ import { SkillItemComponent } from './components/skill-item/skill-item.component
     AboutComponent,
     FooterComponent,
     SkillsComponent,
-    SkillItemComponent
+    SkillItemComponent,
+    PortfolioComponent,
+    PortfolioItemComponent,
+    LoginModalComponent,
+    EducacionComponent,
+    EducacionItemComponent
   ],
   imports: [
     BrowserModule,
