@@ -10,8 +10,7 @@ import { Subscription } from 'rxjs';
 export class AddSkillComponent implements OnInit {
   @Output() addOnSkill : EventEmitter<Skill> = new EventEmitter()
   name : string = "";
-  porc : number = 0;
-  
+  porc : number = 0;  
   constructor() { }
 
   ngOnInit(): void {
