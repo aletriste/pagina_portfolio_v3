@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { PortfolioItemComponent } from './components/portfolio-item/portfolio-it
 import { LoginModalComponent } from './components/login-modal/login-modal.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { EducacionItemComponent } from './components/educacion-item/educacion-item.component';
+import { AddSkillComponent } from './components/add-skill/add-skill.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +30,13 @@ import { EducacionItemComponent } from './components/educacion-item/educacion-it
     PortfolioItemComponent,
     LoginModalComponent,
     EducacionComponent,
-    EducacionItemComponent
+    EducacionItemComponent,
+    AddSkillComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

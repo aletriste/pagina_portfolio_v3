@@ -14,7 +14,7 @@ export class PortfolioComponent implements OnInit {
   constructor(private portfolioservice: PortfolioService) { }
 
   ngOnInit(): void {
-    this.porfolio = this.portfolioservice.getPortfolio()
+    this.portfolioservice.getPortfolio().subscribe((portfolio)=>this.porfolio = portfolio)
   }
 
 }

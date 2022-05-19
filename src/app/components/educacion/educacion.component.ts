@@ -13,7 +13,7 @@ export class EducacionComponent implements OnInit {
   constructor(private educationservice : EducationService ) { }
 
   ngOnInit(): void {
-    this.education = this.educationservice.getEducation();
+    this.educationservice.getEducation().subscribe((education) => (this.education = education));
   }
 
 }
