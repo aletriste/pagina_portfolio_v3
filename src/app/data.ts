@@ -45,24 +45,24 @@ export const EDUCACION : Educacion[] = [
         centro: "Argentina Programa",
         titulo: "SeProgramar",
         descipcion: "La cuenta de Alejandro Tristezza está verificada. Mumuki certifica que completó el curso de Certificación Argentina Programa Sé Programar",
-        imagenUrl: "htttp",
-        linkUrl: "kumi.com"
+        imagenUrl: "ttps://ibb.co/XLQKYkL",
+        linkUrl: "https://mumuki.io/argentina-programa/certificates/verify/1TqCCiukSFvq250s"
 
     },
     { id: 2,
         centro: "Freecodecamp",
         titulo: "Responsive Web Desing",
         descipcion: "This certifies that Alejandro Tristezza has successfully completed the freeCodeCamp.org Responsive Web Design Developer Certification, representing approximately 300 hours of coursework.",
-        imagenUrl: "htttp",
-        linkUrl: "frecode.com"
+        imagenUrl: "https://ibb.co/j5t6xvK",
+        linkUrl: "https://www.freecodecamp.org/certification/triste/responsive-web-design"
 
     },
     { id: 3,
         centro: "Freecodecamp",
         titulo: "JavaScript Algorithms and Data Structures",
         descipcion: "This certifies that Alejandro Tristezza has successfully completed the freeCodeCamp.org JavaScript Algorithms and Data Structures Developer Certification, representing approximately 300 hours of coursework.",
-        imagenUrl: "htttp",
-        linkUrl: "kfrecode.com"
+        imagenUrl: "https://ibb.co/FwXLBRh",
+        linkUrl: "https://www.freecodecamp.org/certification/triste/javascript-algorithms-and-data-structures"
 
     },
 ]
