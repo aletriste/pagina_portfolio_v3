@@ -77,5 +77,15 @@
       "imagenUrl": "https://i.ibb.co/zRFTSqm/certif3.png",
       "linkUrl": "https://www.freecodecamp.org/certification/triste/javascript-algorithms-and-data-structures"
     }
+  ],
+  "about" :[
+    {
+      "id" : 1,
+      "name": "Alejandro Tristezza",
+      "age" : 37,
+      "text" : "Esto es demasiado largo asi que lo acorte un poco para probar",
+      "imageUrl" :"https://i.ibb.co/s9M8yC1/about.jpg",
+      "ocupation" : "Full-stack Developer"
+    }
   ]
 }

@@ -28,4 +28,5 @@ export interface About {
     age : number;
     ocupation: string;
     text: string;
+    imageUrl: string;
 }
