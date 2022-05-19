@@ -15,5 +15,9 @@ export class EducacionComponent implements OnInit {
   ngOnInit(): void {
     this.educationservice.getEducation().subscribe((education) => (this.education = education));
   }
+  addEducation(education:Educacion){
+    this.educationservice.addEducation(education).subscribe((education)=>(this.education.push(education)))
+  }
+
 
 }

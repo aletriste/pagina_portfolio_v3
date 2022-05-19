@@ -17,6 +17,8 @@ import { LoginModalComponent } from './components/login-modal/login-modal.compon
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { EducacionItemComponent } from './components/educacion-item/educacion-item.component';
 import { AddSkillComponent } from './components/add-skill/add-skill.component';
+import { AddPortfolioComponent } from './components/add-portfolio/add-portfolio.component';
+import { AddEducacionComponent } from './components/add-educacion/add-educacion.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { AddSkillComponent } from './components/add-skill/add-skill.component';
     LoginModalComponent,
     EducacionComponent,
     EducacionItemComponent,
-    AddSkillComponent
+    AddSkillComponent,
+    AddPortfolioComponent,
+    AddEducacionComponent
   ],
   imports: [
     BrowserModule,

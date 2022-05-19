@@ -1,0 +1,39 @@
+<div class="modal fade" id="add-portfolio-modal" tabindex="-1" aria-labelledby="add portfolio modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="add-skill-titulo">Agregar al Porfolio</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form (ngSubmit)="onSubmit()">
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="titulo" class="form-label">Titulo</label>
+                <input type="text" class="form-control" name="titulo" id="titulo" placeholder="agrega el titulo" [(ngModel)]="titulo">
+            </div>
+            <div class="mb-3">
+                <label for="subtitulo" class="form-label">Subtitulo</label>
+                <input type="text" class="form-control" name="subtitulo" id="subtitulo" placeholder="subtitulo" [(ngModel)]="subtitulo">
+            </div>
+            <div class="mb-3">
+                <label for="text" class="form-label">Descripcion</label>
+                <input type="text" class="form-control" name="text" id="text" placeholder="agrega una descripcion" [(ngModel)]="text">
+            </div>
+            <div class="mb-3">
+                <label for="imageUrl" class="form-label">Imagen</label>
+                <input type="text" class="form-control" name="imageUrl" id="imageUrl" placeholder="agrega el link a una imagen externa" [(ngModel)]="imageUrl">
+            </div>
+            <div class="mb-3">
+                <label for="linkUrl" class="form-label">Link</label>
+                <input type="text" class="form-control" name="linkUrl" id="linkUrl" placeholder="agrega el link al proyecto" [(ngModel)]="linkUrl">
+            </div>
+            
+              
+        </div>
+        <div class="modal-footer">
+          
+          <button type="submit" class="btn btn-primary" id="btnEntar">Add <i class="fa-solid fa-right-to-bracket"></i></button>
+        </div>
+        </form>
+    </div>
+  </div>

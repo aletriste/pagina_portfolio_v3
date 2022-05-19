@@ -15,6 +15,9 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit(): void {
     this.portfolioservice.getPortfolio().subscribe((portfolio)=>this.porfolio = portfolio)
+  };
+  addPortfolio(portfolio:Portfolio){
+    this.portfolioservice.addPortfolio(portfolio).subscribe((portfolio)=>(this.porfolio.push(portfolio)))
   }
 
 }

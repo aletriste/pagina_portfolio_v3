@@ -16,8 +16,12 @@ const httpOptions = {
 export class PortfolioService {
   private apiUrl ="http://localhost:5001/portfolio"
   constructor(private http:HttpClient) { }
+  
   getPortfolio():Observable<Portfolio[]>{
     return this.http.get<Portfolio[]>(this.apiUrl)
+  };
+  addPortfolio(portfolio:Portfolio):Observable<Portfolio>{
+    return this.http.post<Portfolio>(this.apiUrl, portfolio, httpOptions)
   }
   
 }

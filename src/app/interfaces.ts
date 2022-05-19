@@ -17,7 +17,7 @@ export interface Educacion{
     id?: Number;
     centro: String;
     titulo: String;
-    descipcion: String;
+    text: String;
     imagenUrl: String;
     linkUrl: String;
 }

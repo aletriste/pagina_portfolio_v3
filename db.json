@@ -34,6 +34,11 @@
       "name": "otra habilidad",
       "porc": 0,
       "id": 7
+    },
+    {
+      "name": "una mas",
+      "porc": "60",
+      "id": 8
     }
   ],
   "portfolio": [
@@ -60,14 +65,22 @@
       "text": "Esta es una breve descripcion del proxecto tres",
       "imageUrl": "https://i.ibb.co/nBRNQJD/portfolio-Image3.jpg",
       "linkUrl": "https://codepen.io/Triste84/full/LYyQPdN"
+    },
+    {
+      "titulo": "Poryecto 4",
+      "subtitulo": "este es el proyecto 4",
+      "text": "esta es una descripcion del poryecto 4",
+      "imageUrl": "https://i.ibb.co/gmcP6RD/portfolio-Image4.jpg",
+      "linkUrl": "https://codepen.io/Triste84/full/NWjyqxw",
+      "id": 4
     }
   ],
-  "Education": [
+  "education": [
     {
       "id": 1,
       "centro": "Argentina Programa",
       "titulo": "SeProgramar",
-      "descipcion": "La cuenta de Alejandro Tristezza está verificada. Mumuki certifica que completó el curso de Certificación Argentina Programa Sé Programar",
+      "text": "La cuenta de Alejandro Tristezza está verificada. Mumuki certifica que completó el curso de Certificación Argentina Programa Sé Programar",
       "imagenUrl": "https://i.ibb.co/Gp68H3p/certif1.png",
       "linkUrl": "https://mumuki.io/argentina-programa/certificates/verify/1TqCCiukSFvq250s"
     },
@@ -75,7 +88,7 @@
       "id": 2,
       "centro": "Freecodecamp",
       "titulo": "Responsive Web Desing",
-      "descipcion": "This certifies that Alejandro Tristezza has successfully completed the freeCodeCamp.org Responsive Web Design Developer Certification, representing approximately 300 hours of coursework.",
+      "text": "This certifies that Alejandro Tristezza has successfully completed the freeCodeCamp.org Responsive Web Design Developer Certification, representing approximately 300 hours of coursework.",
       "imagenUrl": "https://i.ibb.co/Qc0bqFB/certif2.png",
       "linkUrl": "https://www.freecodecamp.org/certification/triste/responsive-web-design"
     },
@@ -83,9 +96,17 @@
       "id": 3,
       "centro": "Freecodecamp",
       "titulo": "JavaScript Algorithms and Data Structures",
-      "descipcion": "This certifies that Alejandro Tristezza has successfully completed the freeCodeCamp.org JavaScript Algorithms and Data Structures Developer Certification, representing approximately 300 hours of coursework.",
+      "text": "This certifies that Alejandro Tristezza has successfully completed the freeCodeCamp.org JavaScript Algorithms and Data Structures Developer Certification, representing approximately 300 hours of coursework.",
       "imagenUrl": "https://i.ibb.co/zRFTSqm/certif3.png",
       "linkUrl": "https://www.freecodecamp.org/certification/triste/javascript-algorithms-and-data-structures"
+    },
+    {
+      "centro": "es una prueba",
+      "titulo": "esto una prueba",
+      "text": "esta es una descripcion de prueba",
+      "imagenUrl": "https://i.ibb.co/c18r9Jc/portfolio-Image6.webp",
+      "linkUrl": "https://codepen.io/Triste84/full/LYyQPdN",
+      "id": 4
     }
   ]
 }
