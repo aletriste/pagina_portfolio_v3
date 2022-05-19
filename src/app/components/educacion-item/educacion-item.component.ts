@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Educacion } from 'src/app/interfaces';
 import { EDUCACION } from 'src/app/data';
  
@@ -9,9 +9,14 @@ import { EDUCACION } from 'src/app/data';
 })
 export class EducacionItemComponent implements OnInit {
   @Input() education : Educacion = EDUCACION[0]
+  @Output() onDeleteEducation : EventEmitter<Educacion> = new EventEmitter()
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onClick(education : Educacion){
+    this.onDeleteEducation.emit(education)
   }
 
 }

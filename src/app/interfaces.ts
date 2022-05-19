@@ -21,3 +21,11 @@ export interface Educacion{
     imagenUrl: String;
     linkUrl: String;
 }
+
+export interface About {
+    id? : number;
+    name: string;
+    age : number;
+    ocupation: string;
+    text: string;
+}
