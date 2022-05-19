@@ -25,4 +25,8 @@ export class SkillService {
     return this.http.post<Skill>(this.apiUrl, skill, httpOptions)
   }
   
+  deleteSkill(skill:Skill):Observable<Skill>{
+    const url = `${this.apiUrl}/${skill.id}`
+    return this.http.delete<Skill>(url)
+  }
 }

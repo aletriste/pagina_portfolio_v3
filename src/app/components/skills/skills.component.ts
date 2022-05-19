@@ -19,4 +19,7 @@ export class SkillsComponent implements OnInit {
   addSkill(skill:Skill){
     this.skilsService.addSkill(skill).subscribe((skil)=>(this.skills.push(skill)))
   }
+  deleteSkill(skill : Skill){
+    this.skilsService.deleteSkill(skill).subscribe(()=> this.skills = this.skills.filter((t) => t.id !== skill.id))
+  }
 }

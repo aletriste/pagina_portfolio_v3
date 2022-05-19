@@ -24,21 +24,6 @@
       "id": 5,
       "name": "Angular",
       "porc": 25
-    },
-    {
-      "name": "habilidad",
-      "porc": 0,
-      "id": 6
-    },
-    {
-      "name": "otra habilidad",
-      "porc": 0,
-      "id": 7
-    },
-    {
-      "name": "una mas",
-      "porc": "60",
-      "id": 8
     }
   ],
   "portfolio": [

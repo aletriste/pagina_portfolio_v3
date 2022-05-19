@@ -1,6 +1,7 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Skill} from 'src/app/interfaces';
 import { SKILLS } from 'src/app/data';
+
 
 @Component({
   selector: 'app-skill-item',
@@ -10,9 +11,13 @@ import { SKILLS } from 'src/app/data';
 export class SkillItemComponent implements OnInit {
   @Input() skill : Skill = SKILLS[0];
   @Input() width : string = ""
+  @Output() onDeleteSkill : EventEmitter<Skill> = new EventEmitter()
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  
+  onClick(skill : Skill){
+    this.onDeleteSkill.emit(skill)
+  }
 }
