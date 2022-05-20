@@ -22,4 +22,7 @@ export class SkillsComponent implements OnInit {
   deleteSkill(skill : Skill){
     this.skilsService.deleteSkill(skill).subscribe(()=> this.skills = this.skills.filter((t) => t.id !== skill.id))
   }
+  editSkill(skill : Skill){
+    
+  }
 }

@@ -19,6 +19,7 @@ import { EducacionItemComponent } from './components/educacion-item/educacion-it
 import { AddSkillComponent } from './components/add-skill/add-skill.component';
 import { AddPortfolioComponent } from './components/add-portfolio/add-portfolio.component';
 import { AddEducacionComponent } from './components/add-educacion/add-educacion.component';
+import { EditSkillComponent } from './components/edit-skill/edit-skill.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AddEducacionComponent } from './components/add-educacion/add-educacion.
     EducacionItemComponent,
     AddSkillComponent,
     AddPortfolioComponent,
-    AddEducacionComponent
+    AddEducacionComponent,
+    EditSkillComponent
   ],
   imports: [
     BrowserModule,

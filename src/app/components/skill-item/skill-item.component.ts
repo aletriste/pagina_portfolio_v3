@@ -12,6 +12,7 @@ export class SkillItemComponent implements OnInit {
   @Input() skill : Skill = SKILLS[0];
   @Input() width : string = ""
   @Output() onDeleteSkill : EventEmitter<Skill> = new EventEmitter()
+  @Output() onEditSkill : EventEmitter<Skill> = new EventEmitter()
   constructor() { }
 
   ngOnInit(): void {
@@ -19,5 +20,8 @@ export class SkillItemComponent implements OnInit {
   
   onClick(skill : Skill){
     this.onDeleteSkill.emit(skill)
+  }
+  onEdit(skill:Skill){
+    this.onEditSkill.emit(skill)
   }
 }

@@ -23,10 +23,19 @@ export class SkillService {
   };
   addSkill(skill:Skill):Observable<Skill>{
     return this.http.post<Skill>(this.apiUrl, skill, httpOptions)
-  }
+  };
   
   deleteSkill(skill:Skill):Observable<Skill>{
     const url = `${this.apiUrl}/${skill.id}`
     return this.http.delete<Skill>(url)
+  };
+
+  editSkill(id: number):Observable<Skill>{
+    const url = `${this.apiUrl}/${id}`
+    return this.http.get<Skill>(url)
+  };
+
+  updateSkill(skill:Skill):Observable<Skill>{
+    return this.http.put<Skill>(this.apiUrl, skill, httpOptions)
   }
 }
