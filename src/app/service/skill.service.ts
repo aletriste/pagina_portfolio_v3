@@ -30,8 +30,8 @@ export class SkillService {
     return this.http.delete<Skill>(url)
   };
 
-  editSkill(id: number):Observable<Skill>{
-    const url = `${this.apiUrl}/${id}`
+  editSkill(skill : Skill):Observable<Skill>{
+    const url = `${this.apiUrl}/${skill.id}`
     return this.http.get<Skill>(url)
   };
 

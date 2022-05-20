@@ -11,13 +11,14 @@ import { ActivatedRoute, Router} from '@angular/router';
 export class EditSkillComponent implements OnInit {
   skill : Skill | undefined
   constructor( private skillService : SkillService,
-    private activatedRoute : ActivatedRoute ) { }
+    private activatedRoute : ActivatedRoute,
+    private router: Router ) { }
 
   ngOnInit(): void {
-    const id = this.activatedRoute.snapshot.params.id;
+    
     this.skillService.editSkill(id).subscribe((skill)=>this.skill = skill)
   }
   onUpdate(){
-    
+
   }
 }
