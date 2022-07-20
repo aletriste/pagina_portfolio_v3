@@ -15,18 +15,19 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class SkillService {
-  private apiUrl ="http://localhost:5001/skill"
+  private apiUrl ="http://localhost:8080/skill"
   constructor(private http:HttpClient) { }
   
   getSkill(): Observable<Skill[]> {
-    return this.http.get<Skill[]>(this.apiUrl);
+    return this.http.get<Skill[]>(this.apiUrl + '/list');
   };
+  
   addSkill(skill:Skill):Observable<Skill>{
-    return this.http.post<Skill>(this.apiUrl, skill, httpOptions)
+    return this.http.post<Skill>(this.apiUrl + '/add', skill, httpOptions)
   }
   
   deleteSkill(skill:Skill):Observable<Skill>{
-    const url = `${this.apiUrl}/${skill.id}`
-    return this.http.delete<Skill>(url)
+    const url = `${this.apiUrl}/delete${skill.id}`
+    return this.http.delete<any>(this.apiUrl + `/delete/${skill.id}`)
   }
 }
