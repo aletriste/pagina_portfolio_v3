@@ -14,19 +14,19 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class EducationService {
-  private apiUrl = "http://localhost:5001/education"
+  private apiUrl = "http://localhost:8080/education"
   constructor(private http:HttpClient) { }
   
   getEducation():Observable<Educacion[]> {
-    return this.http.get<Educacion[]>(this.apiUrl);
+    return this.http.get<Educacion[]>(this.apiUrl + '/list');
   };
 
   addEducation(education:Educacion):Observable<Educacion>{
-    return this.http.post<Educacion>(this.apiUrl, education, httpOptions);
+    return this.http.post<Educacion>(this.apiUrl + '/add', education, httpOptions);
   }
 
   deleteEducation(education:Educacion):Observable<Educacion>{
     const url = `${this.apiUrl}/${education.id}`
-    return this.http.delete<Educacion>(url)
+    return this.http.delete<Educacion>(this.apiUrl + `/delete/${education.id}`)
   }
 }

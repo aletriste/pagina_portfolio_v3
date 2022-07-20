@@ -12,10 +12,10 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class AboutService {
-  private apiUrl ="http://localhost:5001/about"
+  private apiUrl ="http://localhost:8080/about"
   constructor(private http : HttpClient) { }
   
   getAbout(): Observable<About[]> {
-    return this.http.get<About[]>(this.apiUrl);
+    return this.http.get<About[]>(this.apiUrl+'/list');
   };
 }

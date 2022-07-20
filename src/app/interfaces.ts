@@ -18,7 +18,7 @@ export interface Educacion{
     centro: String;
     titulo: String;
     text: String;
-    imagenUrl: String;
+    imageUrl: String;
     linkUrl: String;
 }
 

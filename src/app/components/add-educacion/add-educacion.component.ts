@@ -12,7 +12,7 @@ export class AddEducacionComponent implements OnInit {
   centro: string = ""
   titulo : string = ""
   text : string = ""
-  imagenUrl : string = ""
+  imageUrl : string = ""
   linkUrl : string = ""
   constructor() { }
 
@@ -24,7 +24,7 @@ export class AddEducacionComponent implements OnInit {
       centro : this.centro,
       titulo : this.titulo,
       text : this.text,
-      imagenUrl : this.imagenUrl,
+      imageUrl : this.imageUrl,
       linkUrl: this.linkUrl,
     }
 
