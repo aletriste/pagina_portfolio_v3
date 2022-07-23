@@ -3,22 +3,29 @@ import { Skill } from 'src/app/interfaces';
 import { SkillService } from 'src/app/service/skill.service';
 import { ActivatedRoute, Router} from '@angular/router';
 
+
 @Component({
   selector: 'app-edit-skill',
   templateUrl: './edit-skill.component.html',
   styleUrls: ['./edit-skill.component.css']
 })
 export class EditSkillComponent implements OnInit {
-  skill : Skill | undefined
-  constructor( private skillService : SkillService,
-    private activatedRoute : ActivatedRoute,
-    private router: Router ) { }
+  skills : Skill[] = [];
+
+  id : number; 
+
+  constructor( private skillService : SkillService) { }
+    
 
   ngOnInit(): void {
     
-    this.skillService.editSkill(id).subscribe((skill)=>this.skill = skill)
+   
   }
   onUpdate(){
 
+  }
+
+  public showEdit(id :number){
+    this.id = id;
   }
 }

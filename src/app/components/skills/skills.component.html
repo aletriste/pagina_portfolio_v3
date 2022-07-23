@@ -6,9 +6,9 @@
                 <i id="add-skill-btn" class="fa-solid fa-square-plus btn btn-success" data-bs-toggle="modal" data-bs-target="#add-skill-modal" title="clickeame" ></i>
             </div>
         </div>
-        <app-skill-item *ngFor ="let skill of skills" [skill]="skill" (onDeleteSkill)="deleteSkill(skill)" (onEditSkill)="editSkill(skill)"></app-skill-item>
+        <app-skill-item *ngFor ="let skill of skills" [skill]="skill" (onDeleteSkill)="deleteSkill(skill)" ></app-skill-item>
     </div>
   </section>
   <app-add-skill (addOnSkill)="addSkill($event)"></app-add-skill>
-  <app-edit-skill></app-edit-skill>
+  <app-edit-skill #editskill></app-edit-skill>
  

@@ -13,7 +13,10 @@ export class SkillItemComponent implements OnInit {
   @Input() width : string = ""
   @Output() onDeleteSkill : EventEmitter<Skill> = new EventEmitter()
   @Output() onEditSkill : EventEmitter<Skill> = new EventEmitter()
+  skills : Skill[] = [];
+
   constructor() { }
+
 
   ngOnInit(): void {
   }
