@@ -14,18 +14,18 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class PortfolioService {
-  private apiUrl ="http://localhost:5001/portfolio"
+  private apiUrl ="http://localhost:8080/portfolio"
   constructor(private http:HttpClient) { }
   
   getPortfolio():Observable<Portfolio[]>{
-    return this.http.get<Portfolio[]>(this.apiUrl)
+    return this.http.get<Portfolio[]>(this.apiUrl +'/list')
   };
   addPortfolio(portfolio:Portfolio):Observable<Portfolio>{
-    return this.http.post<Portfolio>(this.apiUrl, portfolio, httpOptions)
+    return this.http.post<Portfolio>(this.apiUrl + '/add', portfolio, httpOptions)
   }
   
   deletePortfolio(portfolio:Portfolio):Observable<Portfolio>{
     const url = `${this.apiUrl}/${portfolio.id}`
-    return this.http.delete<Portfolio>(url)
+    return this.http.delete<Portfolio>(this.apiUrl + `/delete/${portfolio.id}`)
   }
 }
