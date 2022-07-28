@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SkillService } from 'src/app/service/skill.service';
 import { Skill } from 'src/app/interfaces';
 import { SKILLS } from 'src/app/data';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-skills',
@@ -10,10 +11,16 @@ import { SKILLS } from 'src/app/data';
 })
 export class SkillsComponent implements OnInit {
   skills : Skill[] = [];
-  constructor(private skilsService : SkillService) { }
+  isLogged = false;
+  constructor(private skilsService : SkillService, private tokenService:TokenService ) { }
 
   ngOnInit(): void {
    this.skilsService.getSkill().subscribe((skills) => (this.skills = skills));
+   if(this.tokenService.getToken()){
+    this.isLogged=true;
+  }else{
+    this.isLogged = false;
+  }
   };
   
   addSkill(skill:Skill){

@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { PortfolioService } from 'src/app/service/portfolio.service';
 import { Portfolio } from 'src/app/interfaces';
 import { PORTFOLIOS } from 'src/app/data';
+import { TokenService } from 'src/app/service/token.service';
 
 
 @Component({
@@ -10,11 +11,18 @@ import { PORTFOLIOS } from 'src/app/data';
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent implements OnInit {
+  isLogged = false;
+
   porfolio : Portfolio[] = []
-  constructor(private portfolioservice: PortfolioService) { }
+  constructor(private portfolioservice: PortfolioService, private tokenService:TokenService) { }
 
   ngOnInit(): void {
-    this.portfolioservice.getPortfolio().subscribe((portfolio)=>this.porfolio = portfolio)
+    this.portfolioservice.getPortfolio().subscribe((portfolio)=>this.porfolio = portfolio);
+    if(this.tokenService.getToken()){
+      this.isLogged=true;
+    }else{
+      this.isLogged = false;
+    }
   };
   addPortfolio(portfolio:Portfolio){
     this.portfolioservice.addPortfolio(portfolio).subscribe((portfolio)=>(this.porfolio.push(portfolio)))
