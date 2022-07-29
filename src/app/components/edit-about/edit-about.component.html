@@ -1,0 +1,39 @@
+<div class="modal fade" id="edit-about-modal" tabindex="-1" aria-labelledby="edit about modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="edit-about-titulo">Modificar la informacion personal</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form (ngSubmit)="onUpdate()">
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="agregar el nombre" [(ngModel)]="about.name">
+            </div>
+            <div class="mb-3">
+                <label for="age" class="form-label">Titulo</label>
+                <input type="text" class="form-control" name="edad" id="edad" placeholder="agregar la edad" [(ngModel)]="about.age">
+            </div>
+            <div class="mb-3">
+                <label for="text" class="form-label">Descripcion</label>
+                <input type="text" class="form-control" name="text" id="text" placeholder="agrega una descripcion" [(ngModel)]="about.text">
+            </div>
+            <div class="mb-3">
+                <label for="imagenUrl" class="form-label">Imagen</label>
+                <input type="text" class="form-control" name="imageUrl" id="imageUrl" placeholder="agregar una imagen" [(ngModel)]="about.imageUrl">
+            </div>
+            <div class="mb-3">
+                <label for="ocupation" class="form-label">Ocupacion</label>
+                <input type="text" class="form-control" name="ocupation" id="ocupation" placeholder="agregar la ocupacion actual" [(ngModel)]="about.ocupation">
+            </div>
+            
+              
+        </div>
+        <div class="modal-footer">
+          
+          <button type="submit" class="btn btn-primary" id="btnEntar"data-bs-dismiss="modal">Editar <i class="fa-solid fa-right-to-bracket"></i></button>
+        </div>
+        </form>
+    </div>
+  </div>
