@@ -20,6 +20,7 @@ import { AddSkillComponent } from './components/add-skill/add-skill.component';
 import { AddPortfolioComponent } from './components/add-portfolio/add-portfolio.component';
 import { AddEducacionComponent } from './components/add-educacion/add-educacion.component';
 import { EditSkillComponent } from './components/edit-skill/edit-skill.component';
+import { EditPortfolioComponent } from './components/edit-portfolio/edit-portfolio.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { EditSkillComponent } from './components/edit-skill/edit-skill.component
     AddSkillComponent,
     AddPortfolioComponent,
     AddEducacionComponent,
-    EditSkillComponent
+    EditSkillComponent,
+    EditPortfolioComponent
   ],
   imports: [
     BrowserModule,

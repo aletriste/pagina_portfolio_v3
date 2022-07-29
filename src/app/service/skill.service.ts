@@ -35,6 +35,6 @@ export class SkillService {
     return this.http.get<Skill>(this.apiUrl + `/find/${id}`)
   }
   editSkill(skill:Skill):Observable<Skill>{
-    return this.http.put<Skill>(this.apiUrl + '/edit', skill)
+    return this.http.put<Skill>(this.apiUrl + '/edit', skill, httpOptions)
   }
 }

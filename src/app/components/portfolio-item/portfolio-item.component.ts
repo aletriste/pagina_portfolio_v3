@@ -10,11 +10,15 @@ import { PORTFOLIOS } from 'src/app/data';
 export class PortfolioItemComponent implements OnInit {
   @Input() portfolio : Portfolio = PORTFOLIOS[0];
   @Output() onDeletePortfolio: EventEmitter<Portfolio> = new EventEmitter()
+  @Output() onEditPortfolio: EventEmitter<Portfolio> = new EventEmitter()
   constructor() { }
 
   ngOnInit(): void {
   }
   onClick(portfolio: Portfolio){
     this.onDeletePortfolio.emit(portfolio)
+  }
+  onEdit(portfolio : Portfolio){
+    this.onEditPortfolio.emit(portfolio)
   }
 }

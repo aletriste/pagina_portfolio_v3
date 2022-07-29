@@ -22,5 +22,8 @@ export class PortfolioComponent implements OnInit {
   deletePortfolio(portfolio : Portfolio){
     this.portfolioservice.deletePortfolio(portfolio).subscribe(()=> this.porfolio = this.porfolio.filter((t) => t.id !== portfolio.id))
   }
-
+  editPortfolio(portfolio:Portfolio){
+    this.portfolioservice.editPortfolio(portfolio).subscribe((porfolio)=>this.porfolio.push(porfolio))
+    window.location.reload();
+  }
 }

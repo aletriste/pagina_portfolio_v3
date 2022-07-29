@@ -12,27 +12,17 @@ import { ActivatedRoute, Router} from '@angular/router';
 export class EditSkillComponent implements OnInit {
  
   @Output() editOnSkill : EventEmitter <Skill> = new EventEmitter()
-  skills : Skill[] = [];
-
+  
   skill = {} as Skill
-
-  name : string = "";
-  porc : number = 0;  
-
   constructor( private skillService : SkillService) { }
-    
-
-  ngOnInit(): void {
-    
    
-  }
-  onUpdate(){
-    const newSkill = {
-      name : this.name,
-      porc : this.porc,
+  ngOnInit(): void {
       
-    }
-    return this.editOnSkill.emit(newSkill)
+  }
+  
+  onUpdate(){
+    
+    return this.editOnSkill.emit(this.skill)
   }
  
 
