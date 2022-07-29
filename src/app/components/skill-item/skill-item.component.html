@@ -1,8 +1,8 @@
 <div class="card">
     <div class="row" >
         <div class="col-xl-10"><h5 class="card-title">{{skill.name}}</h5></div>
-        <div class="col-xl-1"><i class="fa-solid fa-trash-can btn btn-danger" (click)="onClick(skill)"></i></div>
-        <div class="col-xl-1"><i class="fa-solid fa-pen-to-square btn btn-success" data-bs-toggle="modal" data-bs-target="#edit-skill-modal" title="clickeame"  (click)="onEdit(skill)"></i></div>
+        <div class="col-xl-1"><i class="fa-solid fa-trash-can btn btn-danger" *ngIf="isLogged"(click)="onClick(skill)"></i></div>
+        <div class="col-xl-1"><i class="fa-solid fa-pen-to-square btn btn-success" data-bs-toggle="modal" data-bs-target="#edit-skill-modal" title="clickeame"  *ngIf="isLogged" (click)="onEdit(skill)"></i></div>
     </div>
     <div class="progress" style="height: 30px;">
         <div class="progress-bar" role="progressbar"  [ngStyle]="{'width.%' : skill.porc}" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">{{skill.porc + "%"}}</div>
