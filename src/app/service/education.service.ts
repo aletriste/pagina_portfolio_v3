@@ -29,4 +29,11 @@ export class EducationService {
     const url = `${this.apiUrl}/${education.id}`
     return this.http.delete<Educacion>(this.apiUrl + `/delete/${education.id}`)
   }
+
+  findEducacion(id:number):Observable<Educacion>{
+    return this.http.get<Educacion>(this.apiUrl + `/find/${id}`)
+  }
+  editEducacion(educacion:Educacion):Observable<Educacion>{
+    return this.http.put<Educacion>(this.apiUrl + '/edit', educacion, httpOptions)
+  }
 }

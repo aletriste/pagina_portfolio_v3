@@ -6,7 +6,8 @@
                 <div class="col-xl-1"><i id="add-education-btn"class="fa-solid fa-square-plus btn btn-success" data-bs-toggle="modal" data-bs-target="#add-education-modal" title="clickeame"></i></div>
             </div> 
         
-       <app-educacion-item *ngFor ="let education of education" [education]="education" (onDeleteEducation)="deleteEducation(education)"></app-educacion-item> 
+       <app-educacion-item *ngFor ="let education of education" [education]="education" (onDeleteEducation)="deleteEducation(education)" (onEditEducaion)="(editeducacion.showEdit(education.id))"></app-educacion-item> 
     </div>
   </section>
   <app-add-educacion (addOnEducation)="addEducation($event)"></app-add-educacion> 
+  <app-edit-educacion #editeducacion (editOnEducacion)="editEducation($event)" ></app-edit-educacion>

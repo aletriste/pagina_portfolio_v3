@@ -10,6 +10,7 @@ import { EDUCACION } from 'src/app/data';
 export class EducacionItemComponent implements OnInit {
   @Input() education : Educacion = EDUCACION[0]
   @Output() onDeleteEducation : EventEmitter<Educacion> = new EventEmitter()
+  @Output() onEditEducaion: EventEmitter<Educacion> = new EventEmitter()
   constructor() { }
 
   ngOnInit(): void {
@@ -18,5 +19,7 @@ export class EducacionItemComponent implements OnInit {
   onClick(education : Educacion){
     this.onDeleteEducation.emit(education)
   }
-
+  onEdit(education : Educacion){
+    return this.onEditEducaion.emit(education)
+  }
 }

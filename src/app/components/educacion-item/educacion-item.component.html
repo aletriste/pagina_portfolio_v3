@@ -3,7 +3,7 @@
         <div class="row">
         <div class="col-xl-10">{{education.centro}}</div>
         <div class="col-xl-1"><i class="fa-solid fa-trash-can btn btn-danger" (click)="onClick(education)"></i></div>
-        <div class="col-xl-1"><i class="fa-solid fa-pen-to-square btn btn-success"></i></div>
+        <div class="col-xl-1"><i class="fa-solid fa-pen-to-square btn btn-success" data-bs-toggle="modal" data-bs-target="#edit-education-modal" title="clickeame"  (click)="onEdit(education)"></i></div>
         </div> 
     </div>
     <div class="row g-0">
