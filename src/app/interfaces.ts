@@ -1,11 +1,11 @@
 export interface Skill{
-    id? : Number;
-    name : String;
-    porc: Number;
+    id? : number;
+    name : string;
+    porc: number;
 };
 
 export interface Portfolio{
-    id? : Number;
+    id? : number;
     titulo: string;
     subtitulo: string;
     text: string;
@@ -14,12 +14,12 @@ export interface Portfolio{
 };
 
 export interface Educacion{
-    id?: Number;
-    centro: String;
-    titulo: String;
-    text: String;
-    imageUrl: String;
-    linkUrl: String;
+    id?: number;
+    centro: string;
+    titulo: string;
+    text: string;
+    imageUrl: string;
+    linkUrl: string;
 }
 
 export interface About {

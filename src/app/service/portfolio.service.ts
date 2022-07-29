@@ -27,5 +27,13 @@ export class PortfolioService {
   deletePortfolio(portfolio:Portfolio):Observable<Portfolio>{
     const url = `${this.apiUrl}/${portfolio.id}`
     return this.http.delete<Portfolio>(this.apiUrl + `/delete/${portfolio.id}`)
+
+  }
+
+  findPortfolio(id:number):Observable<Portfolio>{
+    return this.http.get<Portfolio>(this.apiUrl + `/find/${id}`)
+  }
+  editPortfolio(portfolio:Portfolio):Observable<Portfolio>{
+    return this.http.put<Portfolio>(this.apiUrl + '/edit', portfolio, httpOptions)
   }
 }
