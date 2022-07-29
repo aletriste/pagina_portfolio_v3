@@ -9,10 +9,16 @@ import { About } from 'src/app/interfaces';
 })
 export class AboutComponent implements OnInit {
   about : About[] = []
+  
   constructor(private aboutService : AboutService) { }
 
   ngOnInit(): void {
     this.aboutService.getAbout().subscribe((about)=>this.about = about)
+  }
+
+  editAbout(about:About){
+    this.aboutService.editAbout(about).subscribe((about)=>this.about.push(about))
+    window.location.reload();
   }
 
 }

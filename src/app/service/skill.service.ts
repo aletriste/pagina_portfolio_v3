@@ -32,8 +32,10 @@ export class SkillService {
     return this.http.delete<any>(this.apiUrl + `/delete/${skill.id}`)
   }
 
-  editSkill(skill:Skill):Observable<Skill>{
-    return this.http.post<Skill>(this.apiUrl + '/edit', skill, httpOptions)
+  findSkill(id:number):Observable<Skill>{
+    return this.http.get<Skill>(this.apiUrl + `/find/${id}`)
   }
-  
+  editSkill(skill:Skill):Observable<Skill>{
+    return this.http.put<Skill>(this.apiUrl + '/edit', skill, httpOptions)
+  }
 }

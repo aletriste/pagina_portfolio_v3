@@ -30,5 +30,9 @@ export class EducacionComponent implements OnInit {
     this.educationservice.deleteEducation(education).subscribe(()=> this.education = this.education.filter((t) => t.id !== education.id))
   }
 
+  editEducation(education:Educacion){
+    this.educationservice.editEducacion(education).subscribe((education)=>this.education.push(education))
+    window.location.reload();
+  }
 
 }

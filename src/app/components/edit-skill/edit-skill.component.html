@@ -1,0 +1,26 @@
+<div class="modal fade" id="edit-skill-modal" tabindex="-1" aria-labelledby="edit skill modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="add-skill-titulo">Editar Habilidad</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form (ngSubmit)="onUpdate()">
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nombre de la Habilidad</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Add name of task" [(ngModel)]="skill.name" >
+            </div>
+              <div class="mb-3">
+                <label for="porcentaje" class="form-label">Porcentaje de la habilidad</label>
+                <input type="text" class="form-control" name="porc" id="porcentaje" placeholder="10" [(ngModel)]="skill.porc">
+              </div>
+              
+        </div>
+        <div class="modal-footer">
+          
+          <button type="submit" class="btn btn-primary" id="btnEntar" data-bs-dismiss="modal">Edit <i class="fa-solid fa-right-to-bracket"></i></button>
+        </div>
+        </form>
+    </div>
+  </div>

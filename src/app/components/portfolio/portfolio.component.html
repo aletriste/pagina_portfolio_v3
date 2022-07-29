@@ -7,7 +7,8 @@
                     <i id="add-portfolio-btn" class="fa-solid fa-square-plus btn btn-success" data-bs-toggle="modal" data-bs-target="#add-portfolio-modal" title="clickeame" *ngIf="isLogged"></i>
                 </div>
             </div> 
-        <app-portfolio-item *ngFor ="let portfolio of porfolio" [portfolio]="portfolio" (onDeletePortfolio)="deletePortfolio(portfolio)"></app-portfolio-item>
+        <app-portfolio-item *ngFor ="let portfolio of porfolio" [portfolio]="portfolio" (onDeletePortfolio)="deletePortfolio(portfolio)" (onEditPortfolio)="(editportfolio.showEdit(portfolio.id))"></app-portfolio-item>
     </div>
   </section>
   <app-add-portfolio (addOnPorfolio)="addPortfolio($event)"></app-add-portfolio>
+  <app-edit-portfolio #editportfolio (editOnPortfolio)="editPortfolio($event)"></app-edit-portfolio>

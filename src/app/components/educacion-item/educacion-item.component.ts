@@ -12,7 +12,8 @@ export class EducacionItemComponent implements OnInit {
   isLogged = false;
   @Input() education : Educacion = EDUCACION[0]
   @Output() onDeleteEducation : EventEmitter<Educacion> = new EventEmitter()
-  constructor(private tokenService: TokenService) { }
+  @Output() onEditEducaion: EventEmitter<Educacion> = new EventEmitter()
+  constructor(private tokenService : TokenService) { }
 
   ngOnInit(): void {
     if(this.tokenService.getToken()){
@@ -25,5 +26,7 @@ export class EducacionItemComponent implements OnInit {
   onClick(education : Educacion){
     this.onDeleteEducation.emit(education)
   }
-
+  onEdit(education : Educacion){
+    return this.onEditEducaion.emit(education)
+  }
 }

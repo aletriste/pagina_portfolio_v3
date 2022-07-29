@@ -14,7 +14,11 @@ export class SkillItemComponent implements OnInit {
   @Input() skill : Skill = SKILLS[0];
   @Input() width : string = ""
   @Output() onDeleteSkill : EventEmitter<Skill> = new EventEmitter()
-  constructor(private tokenService:TokenService) { }
+  @Output() onEditSkill : EventEmitter<Skill> = new EventEmitter()
+  skills : Skill[] = [];
+
+  constructor(private tokenService : TokenService) { }
+
 
   ngOnInit(): void {
     if(this.tokenService.getToken()){
@@ -26,5 +30,8 @@ export class SkillItemComponent implements OnInit {
   
   onClick(skill : Skill){
     this.onDeleteSkill.emit(skill)
+  }
+  onEdit(skill:Skill){
+    this.onEditSkill.emit(skill)
   }
 }

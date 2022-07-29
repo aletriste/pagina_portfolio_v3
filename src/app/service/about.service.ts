@@ -18,4 +18,12 @@ export class AboutService {
   getAbout(): Observable<About[]> {
     return this.http.get<About[]>(this.apiUrl+'/list');
   };
+
+  findAbout(id:number):Observable<About>{
+    return this.http.get<About>(this.apiUrl + `/find/${id}`)
+  }
+
+  editAbout(about:About):Observable<About>{
+    return this.http.put<About>(this.apiUrl + '/edit', about, httpOptions)
+  }
 }

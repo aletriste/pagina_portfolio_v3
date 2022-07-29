@@ -2,8 +2,8 @@
     <div class="card-header">
         <div class="row">
         <div class="col-xl-10">{{portfolio.titulo}}</div>
-        <div class="col-xl-1"><i class="fa-solid fa-trash-can btn btn-danger" (click)="onClick(portfolio)"*ngIf="isLogged"></i></div>
-        <div class="col-xl-1"><i class="fa-solid fa-pen-to-square btn btn-success"*ngIf="isLogged"></i></div>
+        <div class="col-xl-1"><i class="fa-solid fa-trash-can btn btn-danger" (click)="onClick(portfolio)"></i></div>
+        <div class="col-xl-1"><i class="fa-solid fa-pen-to-square btn btn-success" data-bs-toggle="modal" data-bs-target="#edit-portfolio-modal"(click)="onEdit(portfolio)"></i></div>
         </div> 
     </div>
     <div class="row g-0">

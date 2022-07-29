@@ -1,6 +1,11 @@
 <section id="about">
     <div class="container mt-4 pt-4">
-        <h1 class="text-center">Sobre Mi</h1>
+        <div class="row">
+            <div class="col-xl-11"><h1 class="text-center">Sobre Mi</h1></div>
+                <div class="col-xl-1">
+                    <i id="edit-about-btn" class="fa-solid fa-square-plus btn btn-success" data-bs-toggle="modal" data-bs-target="#edit-about-modal" title="clickeame" (click)="(editabout.showEdit(about[0].id)) "></i>
+            </div>
+        </div>
         <div class="row mt-4">
             <div class="col-lg-4">
                 <img src={{about[0].imageUrl}} class= "imageAboutPage" alt="foto personal" title="este no soy yo">
@@ -27,6 +32,8 @@
                     </p>
                 </div>
             </div>
+            
         </div>
     </div>
   </section> 
+  <app-edit-about #editabout (editOnAbout)="editAbout($event)"></app-edit-about>

@@ -12,8 +12,10 @@ export class PortfolioItemComponent implements OnInit {
   isLogged = false;
   @Input() portfolio : Portfolio = PORTFOLIOS[0];
   @Output() onDeletePortfolio: EventEmitter<Portfolio> = new EventEmitter()
+  
+  @Output() onEditPortfolio: EventEmitter<Portfolio> = new EventEmitter()
+  
   constructor(private tokenService:TokenService) { }
-
   ngOnInit(): void {
     if(this.tokenService.getToken()){
       this.isLogged=true;
@@ -23,5 +25,8 @@ export class PortfolioItemComponent implements OnInit {
   }
   onClick(portfolio: Portfolio){
     this.onDeletePortfolio.emit(portfolio)
+  }
+  onEdit(portfolio : Portfolio){
+    this.onEditPortfolio.emit(portfolio)
   }
 }
