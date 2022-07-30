@@ -1,0 +1,39 @@
+<div class="modal fade" id="add-expe-modal" tabindex="-1" aria-labelledby="add expe modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="add-expe-titulo">Modificar Experiencia</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form (ngSubmit)="onSubmit()">
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="empresa" class="form-label">Empresa</label>
+                <input type="text" class="form-control" name="empresa" id="empresa" placeholder="agrega la empresa" [(ngModel)]="empresa">
+            </div>
+            <div class="mb-3">
+                <label for="Ubicacion" class="form-label">Ubicacion</label>
+                <input type="text" class="form-control" name="ubicacion" id="ubicacon" placeholder="ubicacion" [(ngModel)]="ubicacion">
+            </div>
+            <div class="mb-3">
+                <label for="cargo" class="form-label">Puesto</label>
+                <input type="text" class="form-control" name="cargo" id="cargo" placeholder="agrega el puesto ocupado" [(ngModel)]="cargo">
+            </div>
+            <div class="mb-3">
+                <label for="desde" class="form-label">Ocupado desde</label>
+                <input type="text" class="form-control" name="desde" id="desde" placeholder="desde cuando en ese cargo o empresa" [(ngModel)]="desde">
+            </div>
+            <div class="mb-3">
+                <label for="hasta" class="form-label">Ocupado Hasta</label>
+                <input type="text" class="form-control" name="hasta" id="hasta" placeholder="Hasta cuando ocupo ese cargo" [(ngModel)]="hasta">
+            </div>
+            
+              
+        </div>
+        <div class="modal-footer">
+          
+          <button type="submit" class="btn btn-primary" id="btnEntar"data-bs-dismiss="modal">Editar <i class="fa-solid fa-right-to-bracket"></i></button>
+        </div>
+        </form>
+    </div>
+  </div>

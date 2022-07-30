@@ -31,3 +31,11 @@ export interface About {
     imageUrl: string;
 }
 
+export interface Expe{
+    id? : number;
+    empresa: string;
+    ubicacion: string;
+    cargo : string;
+    desde :string;    
+    hasta : string;
+}

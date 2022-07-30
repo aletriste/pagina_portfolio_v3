@@ -1,4 +1,4 @@
-import { Skill, Portfolio, Educacion } from "./interfaces"
+import { Skill, Portfolio, Educacion, Expe } from "./interfaces"
 
 export const SKILLS : Skill[] = [
     {id: 1,
@@ -65,4 +65,15 @@ export const EDUCACION : Educacion[] = [
         linkUrl: "https://www.freecodecamp.org/certification/triste/javascript-algorithms-and-data-structures"
 
     },
+]
+
+export const EXPE : Expe[] = [
+    { id: 1,
+        empresa: "Argentina Programa",
+        ubicacion: "Ciudad de Buenos Aires",
+        cargo: "Logistica y ventas",
+        desde: "Desde",
+        hasta: "2013"
+    },
+    
 ]

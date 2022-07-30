@@ -1,7 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit,} from '@angular/core';
 import { PortfolioService } from 'src/app/service/portfolio.service';
 import { Portfolio } from 'src/app/interfaces';
-import { PORTFOLIOS } from 'src/app/data';
+
 import { TokenService } from 'src/app/service/token.service';
 
 

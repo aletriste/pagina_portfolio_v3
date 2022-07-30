@@ -23,6 +23,10 @@ import { EditSkillComponent } from './components/edit-skill/edit-skill.component
 import { EditPortfolioComponent } from './components/edit-portfolio/edit-portfolio.component';
 import { EditEducacionComponent } from './components/edit-educacion/edit-educacion.component';
 import { EditAboutComponent } from './components/edit-about/edit-about.component';
+import { ExpeComponent } from './components/expe/expe.component';
+import { ExpeItemComponent } from './components/expe-item/expe-item.component';
+import { AddExpeComponent } from './components/add-expe/add-expe.component';
+import { EditExpeComponent } from './components/edit-expe/edit-expe.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +48,11 @@ import { EditAboutComponent } from './components/edit-about/edit-about.component
     EditSkillComponent,
     EditPortfolioComponent,
     EditEducacionComponent,
-    EditAboutComponent
+    EditAboutComponent,
+    ExpeComponent,
+    ExpeItemComponent,
+    AddExpeComponent,
+    EditExpeComponent
   ],
   imports: [
     BrowserModule,
