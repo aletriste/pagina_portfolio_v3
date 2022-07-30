@@ -2,8 +2,8 @@
     <div class="container mt-3">
         
             <div class="row">
-                <div class="col-xl-11"><h1>Education component</h1></div>
-                <div class="col-xl-1"><i id="add-education-btn"class="fa-solid fa-square-plus btn btn-success" data-bs-toggle="modal" data-bs-target="#add-education-modal" title="clickeame" *ngIf="isLogged"></i></div>
+                <div class="col-md-11"><h1>Education</h1></div>
+                <div class="col-md-1"><i id="add-education-btn"class="fa-solid fa-square-plus btn btn-success" data-bs-toggle="modal" data-bs-target="#add-education-modal" title="clickeame" *ngIf="isLogged"></i></div>
             </div> 
         
        <app-educacion-item *ngFor ="let education of education" [education]="education" (onDeleteEducation)="deleteEducation(education)" (onEditEducaion)="(editeducacion.showEdit(education.id))"></app-educacion-item> 

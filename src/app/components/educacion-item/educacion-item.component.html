@@ -1,22 +1,23 @@
-<div class="card mb-3" id="certif1">
-    <div class="card-header">
-        <div class="row">
-        <div class="col-xl-10">{{education.centro}}</div>
-        <div class="col-xl-1"><i class="fa-solid fa-trash-can btn btn-danger" (click)="onClick(education)"*ngIf="isLogged"></i></div>
-        <div class="col-xl-1"><i class="fa-solid fa-pen-to-square btn btn-success"*ngIf="isLogged"></i></div>
-        </div> 
+<div class="card mb-3" id="educacionitem">
+  <div class="card-header">
+    <div class="row">
+      <div class="col-md-10">{{education.centro}}</div>
+      <div class="col-md-1"><i class="fa-solid fa-trash-can btn btn-danger" (click)="onClick(education)"
+          *ngIf="isLogged"></i></div>
+      <div class="col-md-1"><i class="fa-solid fa-pen-to-square btn btn-success" data-bs-toggle="modal"
+          data-bs-target="#edit-education-modal" *ngIf="isLogged" (click)="onEdit(education)"></i></div>
     </div>
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src={{education.imageUrl}} class="img-fluid" alt="...">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">{{education.titulo}}</h5>
-        
+  </div>
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src={{education.imageUrl}} class="img-fluid" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{education.titulo}}</h5>
         <p class="card-text">{{education.text}}</p>
-          <a href={{education.linkUrl}} class="btn btn-success col-md-1">Link</a>
-        </div>
+        <a href={{education.linkUrl}} type="button" class="btn btn-success">Link</a>
       </div>
     </div>
+  </div>
 </div>
