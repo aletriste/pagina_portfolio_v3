@@ -32,7 +32,7 @@ export class EducacionComponent implements OnInit {
 
   editEducation(education:Educacion){
     this.educationservice.editEducacion(education).subscribe()
-    location.reload()
+    
   }
 
 }
