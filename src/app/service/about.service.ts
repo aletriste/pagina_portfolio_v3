@@ -25,6 +25,6 @@ export class AboutService {
   }
 
   editAbout(about:About):Observable<About>{
-    return this.http.put<About>(this.apiUrl + '/edit', about, httpOptions)
+    return this.http.put<About>(this.apiUrl + '/edit', about)
   }
 }

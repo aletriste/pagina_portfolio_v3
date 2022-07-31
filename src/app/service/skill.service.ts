@@ -38,4 +38,5 @@ export class SkillService {
   editSkill(skill:Skill):Observable<Skill>{
     return this.http.put<Skill>(this.apiUrl + '/edit', skill, httpOptions)
   }
+      
 }

@@ -14,19 +14,24 @@ export class EditSkillComponent implements OnInit {
   @Output() editOnSkill : EventEmitter <Skill> = new EventEmitter()
   
   skill = {} as Skill
+  
+  
   constructor( private skillService : SkillService) { }
    
   ngOnInit(): void {
       
   }
   
-  onUpdate(){
-    
-    return this.editOnSkill.emit(this.skill)
-  }
- 
-
   public showEdit(id? :number){
     this.skillService.findSkill(id=== undefined ? 0 : id).subscribe(dato =>{this.skill=dato})
   }
+
+  onUpdate(){
+    return this.editOnSkill.emit(this.skill)
+    
+  }
+ 
+  
+
+  
 }

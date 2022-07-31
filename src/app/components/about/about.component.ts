@@ -24,8 +24,8 @@ export class AboutComponent implements OnInit {
   }
 
   editAbout(about:About){
-    this.aboutService.editAbout(about).subscribe((about)=>this.about.push(about))
-    window.location.reload();
+    this.aboutService.editAbout(about).subscribe()
+    this.ngOnInit()
   }
 
 }

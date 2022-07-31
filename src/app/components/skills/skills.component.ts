@@ -31,7 +31,9 @@ export class SkillsComponent implements OnInit {
   }
   
   editSkill(skill:Skill){
-    this.skilsService.editSkill(skill).subscribe((skill)=>this.skills.push(skill))
-    window.location.reload();
+    this.skilsService.editSkill(skill).subscribe()
+    this.ngOnInit()
+    
   }
+  
 }

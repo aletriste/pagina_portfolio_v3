@@ -31,8 +31,8 @@ export class EducacionComponent implements OnInit {
   }
 
   editEducation(education:Educacion){
-    this.educationservice.editEducacion(education).subscribe((education)=>this.education.push(education))
-    window.location.reload();
+    this.educationservice.editEducacion(education).subscribe()
+    location.reload()
   }
 
 }

@@ -31,8 +31,8 @@ export class ExpeComponent implements OnInit {
   }
 
   editExpe(expe:Expe){
-    this.expeService.editExpe(expe).subscribe((expe)=>this.expe.push(expe))
-    window.location.reload();
+    this.expeService.editExpe(expe).subscribe();
+    this.ngOnInit();
   }
 
 }

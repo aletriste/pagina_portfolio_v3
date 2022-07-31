@@ -13,6 +13,9 @@
                     <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="#expe">Experiencia</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#education">Education</a>
                 </li>
                 <li class="nav-item">
@@ -25,10 +28,10 @@
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <button type="button" class="btn btn-primary" id="btnEntrar"data-bs-toggle="modal" routerLink="/login-modal" data-bs-target="#loginModal" title="clickeame" *ngIf="!isLogged">LOGIN <i class="fa-solid fa-right-to-bracket"></i></button>
+                    <button type="button" class="btn btn-primary" id="btnEntrar" data-bs-toggle="modal"  data-bs-target="#loginModal" title="clickeame" *ngIf="!isLogged">LOGIN <i class="fa-solid fa-right-to-bracket"></i></button>
                 </li>
                 <li>
-                    <button type="button" class="btn btn-outline-success" title="este deberia aparecer cuando haces login" (click)="onLogOut()" *ngIf="isLogged">LOGOUT <i class="fa-solid fa-right-from-bracket"></i></button>
+                    <button type="button" class="btn btn-outline-success" title="logout" (click)="onLogOut()" *ngIf="isLogged">LOGOUT <i class="fa-solid fa-right-from-bracket"></i></button>
                 </li>
                 <!--  estos dos deberian aparecer y desaparecer al hacer login y logout-->
             </ul>
