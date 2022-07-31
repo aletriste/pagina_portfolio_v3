@@ -23,7 +23,7 @@ export class ExpeComponent implements OnInit {
   }
 
   addExpe(expe:Expe){
-    this.expeService.addExpe(expe).subscribe((expe)=>(this.expe.push(expe)))
+    this.expeService.addExpe(expe).subscribe((data)=>(this.expe.push(expe)))
   }
 
   deleteExpe(expe : Expe){
@@ -31,8 +31,8 @@ export class ExpeComponent implements OnInit {
   }
 
   editExpe(expe:Expe){
-    this.expeService.editExpe(expe).subscribe();
-    this.ngOnInit();
+    this.expeService.editExpe(expe).subscribe(data => {this.ngOnInit()});
+    
   }
 
 }

@@ -23,7 +23,7 @@ export class EducacionComponent implements OnInit {
     }
   }
   addEducation(education:Educacion){
-    this.educationservice.addEducation(education).subscribe((education)=>(this.education.push(education)))
+    this.educationservice.addEducation(education).subscribe((data)=>{this.education.push(education)})
   }
 
   deleteEducation(education : Educacion){
@@ -31,7 +31,7 @@ export class EducacionComponent implements OnInit {
   }
 
   editEducation(education:Educacion){
-    this.educationservice.editEducacion(education).subscribe()
+    this.educationservice.editEducacion(education).subscribe(data => {this.ngOnInit()})
     
   }
 

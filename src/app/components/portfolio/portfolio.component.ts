@@ -25,14 +25,14 @@ export class PortfolioComponent implements OnInit {
     }
   };
   addPortfolio(portfolio:Portfolio){
-    this.portfolioservice.addPortfolio(portfolio).subscribe((portfolio)=>(this.porfolio.push(portfolio)))
+    this.portfolioservice.addPortfolio(portfolio).subscribe((data)=>(this.porfolio.push(portfolio)))
   }
   deletePortfolio(portfolio : Portfolio){
     this.portfolioservice.deletePortfolio(portfolio).subscribe(()=> this.porfolio = this.porfolio.filter((t) => t.id !== portfolio.id))
   }
   editPortfolio(portfolio:Portfolio){
-    this.portfolioservice.editPortfolio(portfolio).subscribe()
-    this.ngOnInit()
+    this.portfolioservice.editPortfolio(portfolio).subscribe(data => {this.ngOnInit()})
+    
     
   }
 }

@@ -24,8 +24,8 @@ export class AboutComponent implements OnInit {
   }
 
   editAbout(about:About){
-    this.aboutService.editAbout(about).subscribe()
-    this.ngOnInit()
+    this.aboutService.editAbout(about).subscribe(data => {this.ngOnInit()})
+    
   }
 
 }

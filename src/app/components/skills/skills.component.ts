@@ -24,15 +24,15 @@ export class SkillsComponent implements OnInit {
   };
   
   addSkill(skill:Skill){
-    this.skilsService.addSkill(skill).subscribe((skil)=>(this.skills.push(skill)))
+    this.skilsService.addSkill(skill).subscribe((data)=>(this.skills.push(skill)))
   }
   deleteSkill(skill : Skill){
     this.skilsService.deleteSkill(skill).subscribe(()=> this.skills = this.skills.filter((t) => t.id !== skill.id))
   }
   
   editSkill(skill:Skill){
-    this.skilsService.editSkill(skill).subscribe()
-    this.ngOnInit()
+    this.skilsService.editSkill(skill).subscribe(data=>{this.ngOnInit()})
+    
     
   }
   
