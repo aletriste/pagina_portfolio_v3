@@ -16,7 +16,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class SkillService {
-  private apiUrl ="http://localhost:8080/skill"
+  private apiUrl ="https://sleepy-reaches-29571.herokuapp.com/skill"
   constructor(private http:HttpClient) { }
   
   getSkill(): Observable<Skill[]> {

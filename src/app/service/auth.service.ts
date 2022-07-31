@@ -7,7 +7,7 @@ import { JwtDto, LoginUsuario, NuevoUsuario } from '../models';
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = "http://localhost:8080/auth/"
+  authURL = "https://sleepy-reaches-29571.herokuapp.com/auth/"
   constructor(private httpClient: HttpClient) { }
 
   public nuevo(nuevoUsuario: NuevoUsuario ): Observable<any>{

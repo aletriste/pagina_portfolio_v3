@@ -14,7 +14,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class EducationService {
-  private apiUrl = "http://localhost:8080/education"
+  private apiUrl = "https://sleepy-reaches-29571.herokuapp.com/education"
   constructor(private http:HttpClient) { }
   
   getEducation():Observable<Educacion[]> {

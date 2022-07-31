@@ -13,7 +13,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class ExpeService {
-  private apiUrl ="http://localhost:8080/expe"
+  private apiUrl ="https://sleepy-reaches-29571.herokuapp.com/expe"
 
   constructor(private http : HttpClient) { }
 

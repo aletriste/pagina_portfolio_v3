@@ -14,7 +14,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class PortfolioService {
-  private apiUrl ="http://localhost:8080/portfolio"
+  private apiUrl ="https://sleepy-reaches-29571.herokuapp.com/portfolio"
   constructor(private http:HttpClient) { }
   
   getPortfolio():Observable<Portfolio[]>{
